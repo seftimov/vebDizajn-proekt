@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!--ION-ICONS-->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!--LINKS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <!--FONTS-->
+    <link
+            href="https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Cinzel&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+<a name="home"></a>
+<div class="whole">
+    <section class="exposure">
+        <div class="open-btn">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+        <!--IMAGE-->
+        <div class="image">
+            <img src="8O6A5194-1-01.jpeg" class="visible"/>
+        </div>
+        <!--NAME-->
+        <div class="name">
+            <h1>Stefan Eftimov</h1>
+            <h2 id="digital">Digital</h2>
+            <h2 id="designer">Designer</h2>
+        </div>
+        <!--MENU-->
+        <div class="layer">
+            <div class="close-btn">
+                <ion-icon name="close"></ion-icon>
+            </div>
+            <div class="menu">
+                <ul class="manu_links">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <a name="about"></a>
+    <section class="about-section">
+        <div class="info">
+            <div class="about-intro">
+                <h1>ABOUT</h1>
+            </div>
+            <div class="about-title">
+                <h3>
+                    Passionate student endeavoring to become a digital designer and video producer/editor!
+                </h3>
+            </div>
+            <div class="about-text">
+                <p>
+                    I am a 20-year-old student majoring in Software Engineering and
+                    Information Systems at the Faculty of Computer Science and Engineering
+                    at "Ss. Cyril and Methodius" University-Skopje.
+                </p>
+                <p>
+                    My technical skills: HTML5, CSS3, JavaScript/jQuery, Bootstrap.
+                </p>
+                <div id="more">
+                    <a href="https://solwaygroup.com/musiccamp/" target="_blank">MORE INFO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a name="projects"></a>
+    <section class="project-section">
+        <div class="container">
+            <h1>PROJECTS</h1>
+            <p>
+                I am an ambassador for the International Solway
+                Music Camp Fellowship program, a face of the program,
+                and a scholarship winner for the Salzburg Festival.
+            </p>
+        </div>
+        <div class="projects">
+            <div class="project-item project-1">
+                <img src="img1.jpg" class="project-img project-1-img"/>
+            </div>
+            <div class="project-item project-2">
+                <img src="img2.jpg" class="project-img project-2-img"/>
+            </div>
+            <div class="project-item project-3">
+                <img src="img3.jpg" class="project-img project-3-img"/>
+            </div>
+            <div class="project-item project-4">
+                <img src="img4.jpg" class="project-img project-4-img"/>
+            </div>
+        </div>
+        <div id="check">
+            <a href="solway.html" target="_blank">CHECK</a>
+        </div>
+    </section>
+
+    <a name="contact"></a>
+    <section class="contact-section">
+        <div class="box">
+            <div class="contact-intro">
+                <h1>CONTACT</h1>
+            </div>
+            <div class="contact-title">
+                <h3>stefaneftimov03@gmail.com</h3>
+            </div>
+            <div class="contact-text">
+                <p>
+                    Please feel free to reach out by sending an e-mail if you need any further information.<br>
+                    I look forward to hearing from you soon.
+                </p>
+                <div id="mail">
+                    <a href="mailto:stefaneftimov03@gmail.com">SEND ME MAIL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    new WOW().init();
+    var t1 = new TimelineMax({ paused: true });
+
+    t1.to(".layer", 1, {
+        opacity: 1,
+        ease: Expo.easeInOut
+    });
+    t1.reverse();
+    $(document).on("click", ".open-btn", function() {
+        t1.reversed(!t1.reversed());
+    });
+    $(document).on("click", ".close-btn", function() {
+        t1.reversed(!t1.reversed());
+    });
+    t1.reverse();
+    $(document).on("click", "li", function() {
+        t1.reversed(!t1.reversed());
+    });
+</script>
+
+</body>
+</html>
